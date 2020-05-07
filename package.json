@@ -1,0 +1,30 @@
+{
+  "name": "remove-ember-classic-decorator-codemod",
+  "version": "0.0.1",
+  "description": "Removes @classic decorator and converts init hook to native constructor",
+  "license": "MIT",
+  "author": "Rustam Goygov <GoygovRustam@gmail.com>",
+  "bin": {
+    "remove-ember-classic-decorator-codemod": "bin/cli.js"
+  },
+  "scripts": {
+    "changelog": "lerna-changelog",
+    "lint": "eslint . --cache",
+    "test": "jest"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "globby": "^11.0.0",
+    "jscodeshift": "^0.8.0",
+    "pkg-dir": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "jest": "^25.5.4",
+    "lerna-changelog": "^1.0.1",
+    "prettier": "2.0.5"
+  }
+}

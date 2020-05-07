@@ -1,0 +1,187 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Basic already converted 1`] = `
+"
+========== INITIAL ============
+
+      import Component from '@ember/component';
+
+      export default class TestComponent extends Component {
+          constructor() {
+            super(a, b, c)
+          }
+      }
+  
+=========== RESULT ============
+
+      import Component from '@ember/component';
+
+      export default class TestComponent extends Component {
+          constructor() {
+            super(a, b, c)
+          }
+      }
+  
+_____________________________________________
+"
+`;
+
+exports[`Basic import statement and classic decorator 1`] = `
+"
+========== INITIAL ============
+
+      import classic from 'ember-classic-decorator';
+      import Component from '@ember/component';
+
+      @classic
+      export default class TestComponent extends Component {
+      }
+  
+=========== RESULT ============
+
+      import Component from '@ember/component';
+
+      export default class TestComponent extends Component {
+      }
+  
+_____________________________________________
+"
+`;
+
+exports[`Basic import statement, classic decorator and init hook 1`] = `
+"
+========== INITIAL ============
+
+      import classic from 'ember-classic-decorator';
+      import Component from '@ember/component';
+
+      @classic
+      export default class TestComponent extends Component {
+          init() {
+            super.init(...arguments)
+          }
+      }
+  
+=========== RESULT ============
+
+      import Component from '@ember/component';
+
+      export default class TestComponent extends Component {
+          constructor() {
+            super(...arguments)
+          }
+      }
+  
+_____________________________________________
+"
+`;
+
+exports[`Basic import statement, classic decorator and init hook when multiple decorators exist 1`] = `
+"
+========== INITIAL ============
+
+      import classic from 'ember-classic-decorator';
+      import Component from '@ember/component';
+
+      @testDecorator
+      @classic
+      @anotherTestDecorator
+      export default class TestComponent extends Component {
+          init() {
+            super.init(...arguments)
+          }
+      }
+  
+=========== RESULT ============
+
+      import Component from '@ember/component';
+
+      @testDecorator
+      @anotherTestDecorator
+      export default class TestComponent extends Component {
+          constructor() {
+            super(...arguments)
+          }
+      }
+  
+_____________________________________________
+"
+`;
+
+exports[`Basic init hook with custom arguments 1`] = `
+"
+========== INITIAL ============
+
+      import Component from '@ember/component';
+
+      export default class TestComponent extends Component {
+          init() {
+            super.init(a, b, c)
+          }
+      }
+  
+=========== RESULT ============
+
+      import Component from '@ember/component';
+
+      export default class TestComponent extends Component {
+          constructor() {
+            super(a, b, c)
+          }
+      }
+  
+_____________________________________________
+"
+`;
+
+exports[`Basic init hook with no arguments 1`] = `
+"
+========== INITIAL ============
+
+      import Component from '@ember/component';
+
+      export default class TestComponent extends Component {
+          init() {
+            super.init()
+          }
+      }
+  
+=========== RESULT ============
+
+      import Component from '@ember/component';
+
+      export default class TestComponent extends Component {
+          constructor() {
+            super()
+          }
+      }
+  
+_____________________________________________
+"
+`;
+
+exports[`Basic only init hook 1`] = `
+"
+========== INITIAL ============
+
+      import Component from '@ember/component';
+
+      export default class TestComponent extends Component {
+          init() {
+            super.init(...arguments)
+          }
+      }
+  
+=========== RESULT ============
+
+      import Component from '@ember/component';
+
+      export default class TestComponent extends Component {
+          constructor() {
+            super(...arguments)
+          }
+      }
+  
+_____________________________________________
+"
+`;
