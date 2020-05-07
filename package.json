@@ -2,6 +2,8 @@
   "name": "remove-ember-classic-decorator-codemod",
   "version": "0.0.1",
   "description": "Removes @classic decorator and converts init hook to native constructor",
+  "homepage": "https://github.com/GoygovRustam/remove-ember-classic-decorator-codemod",
+  "repository": "git@github.com:GoygovRustam/remove-ember-classic-decorator-codemod.git",
   "license": "MIT",
   "author": "Rustam Goygov <GoygovRustam@gmail.com>",
   "bin": {
